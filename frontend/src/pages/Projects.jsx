@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Eye, MapPin, Zap } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Eye, MapPin, Zap, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // Local project image imports
@@ -90,10 +90,46 @@ const projectsList = [
 
 export default function Projects() {
   const [filter, setFilter] = useState('all');
+  const [selectedProjectIndex, setSelectedProjectIndex] = useState(null);
 
   const filteredProjects = filter === 'all' 
     ? projectsList 
     : projectsList.filter(p => p.category === filter);
+
+  // Reset selected project index when filter changes to avoid out of bounds
+  useEffect(() => {
+    setSelectedProjectIndex(null);
+  }, [filter]);
+
+  const handlePrev = () => {
+    setSelectedProjectIndex((prevIndex) => {
+      if (prevIndex === null) return null;
+      return prevIndex === 0 ? filteredProjects.length - 1 : prevIndex - 1;
+    });
+  };
+
+  const handleNext = () => {
+    setSelectedProjectIndex((prevIndex) => {
+      if (prevIndex === null) return null;
+      return prevIndex === filteredProjects.length - 1 ? 0 : prevIndex + 1;
+    });
+  };
+
+  const handleClose = () => {
+    setSelectedProjectIndex(null);
+  };
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (selectedProjectIndex === null) return;
+      if (e.key === 'ArrowLeft') handlePrev();
+      if (e.key === 'ArrowRight') handleNext();
+      if (e.key === 'Escape') handleClose();
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [selectedProjectIndex, filteredProjects]);
 
   return (
     <div className="w-full pt-[110px] md:pt-[135px] pb-16 md:pb-24 bg-slate-50 overflow-hidden">
@@ -147,7 +183,7 @@ export default function Projects() {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           <AnimatePresence mode="popLayout">
-            {filteredProjects.map((project) => (
+            {filteredProjects.map((project, index) => (
               <motion.div 
                 layout
                 key={project.id} 
@@ -156,7 +192,8 @@ export default function Projects() {
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.5, type: "spring", stiffness: 180, damping: 22 }}
                 whileHover={{ y: -6, transition: { duration: 0.2 } }}
-                className="bg-white rounded-2xl overflow-hidden shadow-premium border border-slate-100/50 group"
+                onClick={() => setSelectedProjectIndex(index)}
+                className="bg-white rounded-2xl overflow-hidden shadow-premium border border-slate-100/50 group cursor-pointer"
               >
                 <div className="h-60 overflow-hidden relative">
                   <img 
@@ -171,7 +208,10 @@ export default function Projects() {
                   </span>
 
                   {/* Spec Overlay on Hover */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent opacity-0 group-hover:opacity-100 flex flex-col justify-end p-6 transition-all duration-300">
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent opacity-0 group-hover:opacity-100 flex flex-col justify-between p-6 transition-all duration-300">
+                    <div className="self-end bg-white/10 backdrop-blur-md p-2.5 rounded-full border border-white/20 text-white transform -translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                      <Eye size={18} />
+                    </div>
                     <div className="flex flex-col gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                       <div className="flex items-center gap-1.5 text-primary text-xs font-bold uppercase">
                         <Zap size={14} />
@@ -197,6 +237,111 @@ export default function Projects() {
         </motion.div>
 
       </div>
+
+      {/* Lightbox / Big Screen Modal */}
+      <AnimatePresence>
+        {selectedProjectIndex !== null && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex flex-col items-center justify-between bg-slate-950/98 backdrop-blur-md p-4 sm:p-6"
+            onClick={handleClose}
+          >
+            {/* Top Bar (Responsive positioning and spacing) */}
+            <div className="w-full flex justify-between items-center z-10 text-white mt-1 sm:mt-2 px-1">
+              <span className="text-xs sm:text-sm font-bold tracking-wider bg-slate-900/80 backdrop-blur-md px-3 py-1.5 sm:px-4 sm:py-2 rounded-full border border-white/10 shadow-lg">
+                {selectedProjectIndex + 1} / {filteredProjects.length}
+              </span>
+              <button
+                onClick={handleClose}
+                className="p-2 sm:p-3 rounded-full bg-slate-900/80 backdrop-blur-md border border-white/10 hover:bg-slate-800 hover:text-primary transition-all duration-300 text-white shadow-lg active:scale-95"
+              >
+                <X size={18} className="sm:hidden" />
+                <X size={22} className="hidden sm:block" />
+              </button>
+            </div>
+
+            {/* Main Content Area (Flexible heights for mobile/desktop to prevent clipping) */}
+            <div 
+              className="relative max-w-4xl w-full h-[45vh] sm:h-[55vh] md:h-[60vh] flex items-center justify-center my-auto"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Prev Button (Scaled and styled for touch/hover) */}
+              <button
+                onClick={handlePrev}
+                className="absolute left-1 sm:left-4 z-10 p-2 sm:p-3.5 rounded-full bg-slate-900/60 backdrop-blur-md border border-white/10 hover:bg-slate-800 hover:text-primary active:scale-90 transition-all duration-300 text-white shadow-xl"
+              >
+                <ChevronLeft size={18} className="sm:hidden" />
+                <ChevronLeft size={24} className="hidden sm:block" />
+              </button>
+
+              {/* Main Image with swipe/drag support for mobile */}
+              <motion.div
+                key={selectedProjectIndex}
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.25 }}
+                drag="x"
+                dragConstraints={{ left: 0, right: 0 }}
+                dragElastic={0.4}
+                onDragEnd={(e, info) => {
+                  if (info.offset.x < -60) {
+                    handleNext();
+                  } else if (info.offset.x > 60) {
+                    handlePrev();
+                  }
+                }}
+                className="w-full h-full flex items-center justify-center p-1 sm:p-2 cursor-grab active:cursor-grabbing touch-pan-y"
+              >
+                <img
+                  src={filteredProjects[selectedProjectIndex].image}
+                  alt={filteredProjects[selectedProjectIndex].title}
+                  className="max-w-full max-h-full object-contain rounded-xl sm:rounded-2xl shadow-2xl border border-white/10 pointer-events-none select-none"
+                />
+              </motion.div>
+
+              {/* Next Button (Scaled and styled for touch/hover) */}
+              <button
+                onClick={handleNext}
+                className="absolute right-1 sm:right-4 z-10 p-2 sm:p-3.5 rounded-full bg-slate-900/60 backdrop-blur-md border border-white/10 hover:bg-slate-800 hover:text-primary active:scale-90 transition-all duration-300 text-white shadow-xl"
+              >
+                <ChevronRight size={18} className="sm:hidden" />
+                <ChevronRight size={24} className="hidden sm:block" />
+              </button>
+            </div>
+
+            {/* Bottom Description Area (Responsive layout and typography) */}
+            <motion.div
+              key={`desc-${selectedProjectIndex}`}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 10 }}
+              transition={{ duration: 0.25 }}
+              className="mb-2 sm:mb-4 max-w-xl w-full bg-slate-900/70 backdrop-blur-md border border-white/10 p-4 sm:p-6 rounded-xl sm:rounded-2xl text-center text-white flex flex-col items-center gap-2 sm:gap-3 shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <span className="px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-primary/10 text-primary font-bold text-[9px] sm:text-[10px] uppercase tracking-wider border border-primary/20">
+                {filteredProjects[selectedProjectIndex].category}
+              </span>
+              <h2 className="text-base sm:text-xl md:text-2xl font-heading font-black tracking-tight leading-snug">
+                {filteredProjects[selectedProjectIndex].title}
+              </h2>
+              <div className="flex items-center gap-4 sm:gap-6 mt-0.5 sm:mt-1 text-slate-450 text-[11px] sm:text-sm">
+                <div className="flex items-center gap-1 sm:gap-1.5">
+                  <Zap size={14} className="text-primary sm:w-4 sm:h-4" />
+                  <span className="font-bold">{filteredProjects[selectedProjectIndex].capacity} Capacity</span>
+                </div>
+                <div className="flex items-center gap-1 sm:gap-1.5">
+                  <MapPin size={14} className="text-secondary sm:w-4 sm:h-4" />
+                  <span className="font-semibold">{filteredProjects[selectedProjectIndex].location}</span>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

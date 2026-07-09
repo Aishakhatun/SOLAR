@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { MapPin, Phone, Mail, CheckCircle2, AlertCircle, Loader2, Sparkles, Send } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -55,7 +56,8 @@ export default function Contact() {
     }
 
     try {
-      const response = await fetch('http://localhost:5000/api/contact', {
+      const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+      const response = await fetch(`${API_URL}/api/contact`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -221,7 +223,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, type: "spring", stiffness: 100, damping: 18 }}
-            className="lg:col-span-2 bg-gradient-to-br from-slate-900 via-slate-950 to-blue-950 text-white rounded-3xl p-6 sm:p-8 md:p-10 shadow-[0_20px_50px_rgba(30,58,138,0.25)] flex flex-col gap-8 justify-between relative overflow-hidden border border-slate-800/80"
+            className="lg:col-span-2 bg-[linear-gradient(135deg,#1a2a6c_0%,#0d1b4b_40%,#060d28_100%)] text-white rounded-3xl p-6 sm:p-8 md:p-10 shadow-[0_20px_60px_rgba(26,42,108,0.45)] flex flex-col gap-8 justify-between relative overflow-hidden border border-blue-900/40"
           >
             {/* Background Decorative Blur Blobs */}
             <div className="absolute -top-10 -right-10 w-40 h-40 bg-blue-500/20 rounded-full blur-[40px] pointer-events-none" />
@@ -237,7 +239,7 @@ export default function Contact() {
               </p>
             </div>
 
-            <div className="flex flex-col gap-5 relative z-10">
+            <div className="flex flex-col gap-4 relative z-10">
               {infoItems.map((item, index) => (
                 <motion.a 
                   href={item.link}
@@ -248,14 +250,14 @@ export default function Contact() {
                   whileTap={{ scale: 0.98 }}
                   className="flex gap-4 p-4 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/[0.08] hover:border-white/10 hover:shadow-lg hover:shadow-blue-950/20 transition-all duration-300 group cursor-pointer"
                 >
-                  <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-700 text-white flex items-center justify-center shrink-0 shadow-md shadow-blue-500/20 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-700 text-white flex items-center justify-center shrink-0 shadow-md shadow-blue-500/20 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
                     {item.icon}
                   </div>
-                  <div className="flex flex-col">
-                    <span className="text-slate-400 font-extrabold text-[10px] sm:text-xs uppercase tracking-widest">
+                  <div className="flex flex-col justify-center">
+                    <span className="text-slate-400 font-bold text-[9px] sm:text-[10px] uppercase tracking-wider">
                       {item.label}
                     </span>
-                    <p className="text-slate-200 font-bold text-sm mt-1 leading-relaxed group-hover:text-white transition-colors duration-300 whitespace-pre-line">
+                    <p className="text-slate-200 font-extrabold text-[11px] sm:text-[13px] mt-0.5 leading-relaxed group-hover:text-white transition-colors duration-300 whitespace-pre-line">
                       {item.value}
                     </p>
                   </div>
@@ -266,10 +268,10 @@ export default function Contact() {
             <div className="border-t border-white/5 pt-6 mt-2 relative z-10 flex items-center justify-between">
               <div className="flex items-center gap-2.5">
                 <span className="relative flex h-2.5 w-2.5">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-450 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
                 </span>
-                <span className="text-[10px] sm:text-xs text-slate-400 font-bold uppercase tracking-widest">
+                <span className="text-[10px] sm:text-[11px] text-slate-400 font-bold uppercase tracking-wider">
                   Mon - Sat (9am - 7pm)
                 </span>
               </div>

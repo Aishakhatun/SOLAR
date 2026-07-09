@@ -193,7 +193,7 @@ export default function Home() {
               <Users size={28} />
             </div>
             <div>
-              <div className="text-2xl sm:text-3xl font-extrabold text-slate-800 tracking-tight">500+</div>
+              <div className="text-2xl sm:text-3xl font-extrabold text-slate-800 tracking-tight">1000+</div>
               <div className="text-slate-500 font-bold text-xs sm:text-sm">Happy Customers</div>
               <p className="text-[11px] text-slate-400 mt-0.5">Reliable clean energy installs in Gujarat.</p>
             </div>
@@ -208,7 +208,7 @@ export default function Home() {
               <CheckCircle size={28} />
             </div>
             <div>
-              <div className="text-2xl sm:text-3xl font-extrabold text-slate-800 tracking-tight">350+</div>
+              <div className="text-2xl sm:text-3xl font-extrabold text-slate-800 tracking-tight">800+</div>
               <div className="text-slate-500 font-bold text-xs sm:text-sm">Projects Done</div>
               <p className="text-[11px] text-slate-400 mt-0.5">On-grid and off-grid rooftop solutions.</p>
             </div>
@@ -223,7 +223,7 @@ export default function Home() {
               <Award size={28} />
             </div>
             <div>
-              <div className="text-2xl sm:text-3xl font-extrabold text-slate-800 tracking-tight">140+</div>
+              <div className="text-2xl sm:text-3xl font-extrabold text-slate-800 tracking-tight">20+</div>
               <div className="text-slate-500 font-bold text-xs sm:text-sm">Expert Workers</div>
               <p className="text-[11px] text-slate-400 mt-0.5">Qualified technicians and engineers.</p>
             </div>
