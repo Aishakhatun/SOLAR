@@ -3,15 +3,29 @@ import { Eye, MapPin, Zap, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // Local project image imports
-import pc1 from '../assets/photo/project1/c3.jpeg';
-import pc2 from '../assets/photo/project1/c4.jpeg';
-import pc3 from '../assets/photo/project1/c5.jpeg';
-import pc4 from '../assets/photo/project1/c7.jpeg';
-import pc5 from '../assets/photo/project1/c11.jpeg';
-import pc6 from '../assets/photo/project1/c12.jpeg';
-import pc7 from '../assets/photo/project1/c13.jpeg';
-import pc8 from '../assets/photo/project1/c14.jpeg';
-import pc9 from '../assets/photo/project1/c15.jpeg';
+import pc1 from '../assets/photo/project1/c1.png';
+import pc2 from '../assets/photo/project1/c2.jpeg';
+import pc3 from '../assets/photo/project1/c3.jpeg';
+import pc4 from '../assets/photo/project1/c4.jpeg';
+import pc5 from '../assets/photo/project1/c5.jpeg';
+import pc6 from '../assets/photo/project1/c6.png';
+import pc7 from '../assets/photo/project1/c7.jpeg';
+import pc8 from '../assets/photo/project1/c8.jpeg';
+import pc9 from '../assets/photo/project1/c9.jpeg';
+import pc10 from '../assets/photo/project1/c10.jpeg';
+import pc11 from '../assets/photo/project1/c11.jpeg';
+import pc12 from '../assets/photo/project1/c12.jpeg';
+import pc13 from '../assets/photo/project1/c13.jpeg';
+import pc14 from '../assets/photo/project1/c14.jpeg';
+import pc15 from '../assets/photo/project1/c15.jpeg';
+import pc16 from '../assets/photo/project1/c16.jpeg';
+import pc17 from '../assets/photo/project1/c17.jpeg';
+import pc18 from '../assets/photo/project1/c18.jpeg';
+import pc19 from '../assets/photo/project1/c19.jpeg';
+import pc20 from '../assets/photo/project1/c20.jpeg';
+import pc21 from '../assets/photo/project1/c21.jpeg';
+import pc22 from '../assets/photo/project1/c22.jpeg';
+import pc23 from '../assets/photo/project1/c23.jpeg';
 
 const projectsList = [
   {
@@ -85,6 +99,118 @@ const projectsList = [
     image: pc9,
     capacity: '12 kWp',
     location: 'Khedbrahma, Gujarat'
+  },
+  {
+    id: 10,
+    category: 'commercial',
+    title: 'Commercial Showroom Rooftop',
+    image: pc10,
+    capacity: '45 kWp',
+    location: 'Modasa, Gujarat'
+  },
+  {
+    id: 11,
+    category: 'residential',
+    title: 'Residential Apartment Rooftop',
+    image: pc11,
+    capacity: '25 kWp',
+    location: 'Vadodara, Gujarat'
+  },
+  {
+    id: 12,
+    category: 'commercial',
+    title: 'Textile Factory Solar Grid',
+    image: pc12,
+    capacity: '400 kWp',
+    location: 'Surat, Gujarat'
+  },
+  {
+    id: 13,
+    category: 'commercial',
+    title: 'Agricultural Solar Water Pump',
+    image: pc13,
+    capacity: '30 kWp',
+    location: 'Rajkot, Gujarat'
+  },
+  {
+    id: 14,
+    category: 'residential',
+    title: 'Modern Duplex Rooftop Solar',
+    image: pc14,
+    capacity: '6 kWp',
+    location: 'Himatnagar, Gujarat'
+  },
+  {
+    id: 15,
+    category: 'commercial',
+    title: 'Solar Carport Canopy',
+    image: pc15,
+    capacity: '50 kWp',
+    location: 'Ahmedabad, Gujarat'
+  },
+  {
+    id: 16,
+    category: 'residential',
+    title: 'Eco Villa Rooftop Array',
+    image: pc16,
+    capacity: '18 kWp',
+    location: 'Idar, Gujarat'
+  },
+  {
+    id: 17,
+    category: 'commercial',
+    title: 'School Building Solar Project',
+    image: pc17,
+    capacity: '75 kWp',
+    location: 'Mehsana, Gujarat'
+  },
+  {
+    id: 18,
+    category: 'residential',
+    title: 'Off-grid Rural Home Power',
+    image: pc18,
+    capacity: '5 kWp',
+    location: 'Khedbrahma, Gujarat'
+  },
+  {
+    id: 19,
+    category: 'commercial',
+    title: 'Dairy Plant Rooftop Setup',
+    image: pc19,
+    capacity: '180 kWp',
+    location: 'Himatnagar, Gujarat'
+  },
+  {
+    id: 20,
+    category: 'residential',
+    title: 'Luxury Penthouse Solar System',
+    image: pc20,
+    capacity: '14 kWp',
+    location: 'Gandhinagar, Gujarat'
+  },
+  {
+    id: 21,
+    category: 'commercial',
+    title: 'Hospital Emergency Power Backup',
+    image: pc21,
+    capacity: '100 kWp',
+    location: 'Modasa, Gujarat'
+  },
+  {
+    id: 22,
+    category: 'residential',
+    title: 'Stand-alone Society Solar Grid',
+    image: pc22,
+    capacity: '50 kWp',
+    location: 'Prantij, Gujarat'
+  },
+  {
+    id: 23,
+    category: 'commercial',
+    title: 'Agro-Processing Solar Plant',
+    image: pc23,
+    capacity: '90 kWp',
+    location: 'Talod, Gujarat'
   }
 ];
 
