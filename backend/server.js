@@ -60,7 +60,7 @@ app.post('/api/contact', async (req, res) => {
     // Send Email
     const receiverEmail = process.env.EMAIL_RECEIVER || process.env.EMAIL_USER || 'rajcorporation07@gmail.com';
     const mailOptions = {
-      from: `"Solartec Website" <${process.env.EMAIL_USER}>`,
+      from: `"Solartech Raj_corporation" <${process.env.EMAIL_USER}>`,
       to: receiverEmail,
       replyTo: email,
       subject: `New Inquiry from ${full_name}`,
@@ -151,7 +151,7 @@ app.post('/api/contact', async (req, res) => {
           <div class="container">
             <div class="header">
               <h1>New Inquiry Received</h1>
-              <p>Solartec Contact Form Submission</p>
+              <p>Solartech Raj_corporation Contact Form Submission</p>
             </div>
             <div class="content">
               <div class="detail-row">

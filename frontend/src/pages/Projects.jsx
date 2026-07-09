@@ -371,11 +371,11 @@ export default function Projects() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex flex-col items-center justify-between bg-slate-950/98 backdrop-blur-md p-4 sm:p-6"
+            className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-slate-950/98 backdrop-blur-md p-4 sm:p-6 gap-3 sm:gap-5"
             onClick={handleClose}
           >
             {/* Top Bar (Responsive positioning and spacing) */}
-            <div className="w-full flex justify-between items-center z-10 text-white mt-1 sm:mt-2 px-1">
+            <div className="w-full max-w-4xl flex justify-between items-center z-10 text-white mt-1 px-1">
               <span className="text-xs sm:text-sm font-bold tracking-wider bg-slate-900/80 backdrop-blur-md px-3 py-1.5 sm:px-4 sm:py-2 rounded-full border border-white/10 shadow-lg">
                 {selectedProjectIndex + 1} / {filteredProjects.length}
               </span>
@@ -390,7 +390,7 @@ export default function Projects() {
 
             {/* Main Content Area (Flexible heights for mobile/desktop to prevent clipping) */}
             <div 
-              className="relative max-w-4xl w-full h-[45vh] sm:h-[55vh] md:h-[60vh] flex items-center justify-center my-auto"
+              className="relative max-w-4xl w-full flex-1 min-h-0 flex items-center justify-center"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Prev Button (Scaled and styled for touch/hover) */}
@@ -445,7 +445,7 @@ export default function Projects() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 10 }}
               transition={{ duration: 0.25 }}
-              className="mb-2 sm:mb-4 max-w-xl w-full bg-slate-900/70 backdrop-blur-md border border-white/10 p-4 sm:p-6 rounded-xl sm:rounded-2xl text-center text-white flex flex-col items-center gap-2 sm:gap-3 shadow-2xl"
+              className="max-w-xl w-full bg-slate-900/70 backdrop-blur-md border border-white/10 p-4 sm:p-6 rounded-xl sm:rounded-2xl text-center text-white flex flex-col items-center gap-2 sm:gap-3 shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             >
               <span className="px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-primary/10 text-primary font-bold text-[9px] sm:text-[10px] uppercase tracking-wider border border-primary/20">

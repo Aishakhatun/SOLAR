@@ -91,7 +91,7 @@ export default function Footer() {
         {/* Footer Bottom */}
         <div className="mt-16 pt-6 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-slate-500">
           <p>© {new Date().getFullYear()} <span className="text-white font-semibold">Raj Corporation</span>. All Rights Reserved.</p>
-          <p>Designed by <span className="text-white">Aishaa</span></p>
+          <p>Designed by <span className="text-white">Raj_infotech-[aishasabugar1@gmail.com]</span></p>
         </div>
       </div>
     </footer>

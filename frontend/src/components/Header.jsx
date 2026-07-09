@@ -78,7 +78,7 @@ export default function Header() {
         <Link to="/" className="flex items-center gap-2.5 group" onClick={closeMenu}>
           <img 
             src="/Logo.png" 
-            alt="Solartec Logo" 
+            alt="Solartech Raj_corporation Logo" 
             className="h-10 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
             onError={(e) => e.target.style.display = 'none'} 
           />
