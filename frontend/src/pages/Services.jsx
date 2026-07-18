@@ -176,10 +176,10 @@ export default function Services() {
                 <h3 className="text-2xl font-heading font-bold text-slate-800 mb-3">{brand.name}</h3>
                 <p className="text-slate-500 text-sm leading-relaxed mb-8">{brand.desc}</p>
               </div>
-              <motion.div whileTap={{ scale: 0.98 }} className="w-full">
+              <motion.div whileTap={{ scale: 0.98 }} className="w-full flex justify-center">
                 <Link 
                   to={`/brand/${brand.id}`} 
-                  className={`btn btn-outline ${brand.btnColor} hover:text-white w-full py-3 rounded-xl transition-all duration-300 font-bold text-sm block`}
+                  className={`btn btn-outline ${brand.btnColor} hover:text-white w-1/2 py-2.5 rounded-xl transition-all duration-300 font-bold text-xs flex justify-center items-center`}
                 >
                   Learn Specifications
                 </Link>

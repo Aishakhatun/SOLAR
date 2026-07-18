@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, CheckCircle2, Award, ShieldAlert, Sparkles } from 'lucide-react';
+import { ArrowLeft, CheckCircle2, Award, ShieldAlert, Sparkles, Zap, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 // Local brand images
@@ -10,31 +10,31 @@ import imgAdani from '../assets/photo/service/adani.png';
 
 const brandsData = {
   waaree: {
-    title: 'Waree Solar Solutions',
-    tagline: 'Powering your future with clean, affordable, and reliable solar energy solutions.',
+    title: 'Waaree Energies',
+    tagline: 'India\'s Largest Solar Panel Manufacturer & Global Leader in Renewable Energy.',
     image: imgWaaree,
-    whyText: 'Waree Solar is one of the most trusted solar brands, offering high-quality solar products with advanced technology that delivers optimal performance. We design solutions to reduce energy costs, improve sustainability, and increase energy independence for both homes and businesses.',
-    whyText2: 'Our end-to-end services—ranging from consulting and installation to after-sales support—make Waree Solar the best choice for your solar energy needs. We ensure the best ROI on every solar system.',
+    whyText: 'Founded in 1989, Waaree Energies Limited is India\'s largest vertically integrated solar module manufacturer. With operations spanning the entire solar value chain, Waaree provides world-class Engineering, Procurement, and Construction (EPC) services alongside premium solar PV modules.',
+    whyText2: 'Waaree is consistently recognized as a "Tier 1" manufacturer by BloombergNEF. From utility-scale projects to residential systems, our NABL-accredited reliability labs ensure that every panel delivers maximum efficiency, durability, and superior ROI.',
     benefits: [
       {
-        title: 'Cost-Effective Solutions',
-        desc: 'Affordable solar systems with high efficiency that help you save money on energy bills in the long term.'
+        title: 'World-Class Manufacturing',
+        desc: 'Recognized as the largest non-Chinese PV module manufacturer globally with state-of-the-art facilities across India and the US.'
       },
       {
-        title: 'Industry-Leading Performance',
-        desc: 'Waree’s solar panels use advanced technology to ensure maximum energy production and durability.'
+        title: 'Tier-1 Bankability',
+        desc: 'Consistently rated as a Tier 1 supplier by BloombergNEF, ensuring proven reliability and financial stability for large projects.'
       },
       {
-        title: 'Easy Installation & Maintenance',
-        desc: 'Quick installation process with minimal maintenance required to keep your solar system running smoothly.'
+        title: 'Vertically Integrated',
+        desc: 'A complete ecosystem covering ingots, wafers, solar cells, and modules for unmatched quality control and supply chain security.'
       },
       {
-        title: 'Eco-Friendly Energy',
-        desc: 'Reduce your carbon footprint and contribute to a greener planet by using clean, renewable solar energy.'
+        title: 'Stringent Quality Testing',
+        desc: 'In-house NABL-accredited reliability labs subject all modules to rigorous testing to ensure peak performance in harsh environments.'
       },
       {
-        title: 'Increased Property Value',
-        desc: 'Homes and businesses with solar installations often see an increase in property value and appeal.'
+        title: 'Comprehensive Solutions',
+        desc: 'Beyond solar panels, Waaree offers complete sustainable systems including inverters, smart meters, and battery energy storage.'
       }
     ],
     colorTheme: {
@@ -49,31 +49,31 @@ const brandsData = {
     }
   },
   goldi: {
-    title: 'Goldi Solar Solutions',
-    tagline: 'Empowering homes and businesses with reliable, sustainable solar energy solutions.',
+    title: 'Goldi Solar',
+    tagline: 'Illuminating the Future with High-Efficiency Solar PV Modules and EPC Services.',
     image: imgGoldi,
-    whyText: 'Goldi Solar offers cutting-edge solar technology, engineered for maximum energy efficiency and long-term reliability. Our solar systems help you reduce electricity costs, increase energy independence, and contribute to a cleaner, more sustainable future.',
-    whyText2: 'With an end-to-end approach that includes consultation, system design, installation, and after-sales support, we ensure that every customer gets the best value and performance from their solar investment.',
+    whyText: 'Founded in 2011, Goldi Solar is a rapidly growing, prominent Indian renewable energy company headquartered in Surat, Gujarat. With a manufacturing capacity of over 15 GW, we specialize in high-efficiency solar modules and comprehensive end-to-end solar solutions.',
+    whyText2: 'Goldi Solar leverages AI-powered manufacturing lines and enforces 100% material traceability to guarantee bankable, world-class products. We pride ourselves on a diverse, inclusive work culture and our unwavering commitment to sustainable energy development.',
     benefits: [
       {
-        title: 'Affordable & High-Performance Systems',
-        desc: 'Goldi Solar offers high-quality solar panels at affordable prices, helping you save on energy bills.'
+        title: 'AI-Powered Manufacturing',
+        desc: 'State-of-the-art production facilities utilizing artificial intelligence for precision manufacturing and flawless quality control.'
       },
       {
-        title: 'Long-Term Durability',
-        desc: 'Our solar systems are built to last, with top-tier components designed to withstand various weather conditions.'
+        title: '100% Material Traceability',
+        desc: 'Strict quality standards and transparent sourcing guarantee the reliability, origin, and bankability of every module component.'
       },
       {
-        title: 'Easy Installation & Maintenance',
-        desc: 'Goldi Solar ensures quick and hassle-free installation, with minimal maintenance required to keep your system running smoothly.'
+        title: 'Massive Production Capacity',
+        desc: 'Operating with an extensive 15.2 GW manufacturing capacity to seamlessly meet large-scale global and domestic energy demands.'
       },
       {
-        title: 'Sustainable & Green Energy',
-        desc: 'Reduce your carbon footprint and contribute to environmental conservation by using clean, renewable solar energy.'
+        title: 'End-to-End EPC Services',
+        desc: 'A comprehensive independent power producer providing everything from premium PV modules to complete grid-tied installations.'
       },
       {
-        title: 'Comprehensive Support',
-        desc: 'We offer full customer support, including installation assistance, maintenance, and troubleshooting, ensuring your system performs at its best.'
+        title: 'Inclusive & Ethical Culture',
+        desc: 'Deeply committed to social responsibility by employing diverse local talent, including tribal communities and individuals with disabilities.'
       }
     ],
     colorTheme: {
@@ -88,31 +88,31 @@ const brandsData = {
     }
   },
   adani: {
-    title: 'Adani Solar Solutions',
-    tagline: 'Empowering a sustainable future with advanced solar technology and reliable energy solutions.',
+    title: 'Adani Solar',
+    tagline: 'India\'s First and Largest Vertically Integrated Solar Photovoltaic Ecosystem.',
     image: imgAdani,
-    whyText: 'Adani Solar offers some of the most reliable solar solutions in the industry. With a focus on efficiency and sustainability, Adani Solar is committed to delivering top-tier solar systems that reduce energy costs, promote energy independence, and contribute to a cleaner planet.',
-    whyText2: 'Whether you need a solar system for your home or business, our end-to-end services, including design, installation, and maintenance, ensure you get the best value for your investment.',
+    whyText: 'Adani Solar is the solar manufacturing arm of the Adani Group, dedicated to building a comprehensive ecosystem for solar PV manufacturing in India. Our massive 800-acre facility in Mundra, Gujarat, represents the cutting-edge of domestic energy self-reliance.',
+    whyText2: 'Ranked as a "Top Performer" by PVEL for seven consecutive years, Adani Solar controls the entire value chain—from metallurgical grade silicon and wafers to cells and modules. This complete integration ensures unparalleled quality and long-term sustainability.',
     benefits: [
       {
-        title: 'Proven Reliability',
-        desc: 'Adani Solar systems are engineered to deliver high performance and long-lasting durability, even in harsh environments.'
+        title: 'Fully Integrated Ecosystem',
+        desc: 'Uniquely controls the entire solar supply chain from raw polysilicon and ingots to completed PV cells and high-efficiency modules.'
       },
       {
-        title: 'Sustainable & Green Energy',
-        desc: 'Reduce your carbon footprint and contribute to a greener future with clean, renewable energy from the sun.'
+        title: 'PVEL Top Performer',
+        desc: 'Ranked as a top-performing module manufacturer by PVEL for 7 consecutive years, validating exceptional durability and performance.'
       },
       {
-        title: 'Significant Savings on Energy Bills',
-        desc: 'By generating your own electricity, you reduce dependency on conventional energy sources, leading to lower utility costs.'
+        title: 'Tier-1 Supplier Status',
+        desc: 'Recognized globally as a BloombergNEF Tier-1 PV Module supplier, guaranteeing high bankability for massive utility-scale projects.'
       },
       {
-        title: 'Advanced Technology',
-        desc: 'Adani Solar uses cutting-edge technology to ensure maximum energy efficiency and performance for your home or business.'
+        title: 'Unmatched Manufacturing Scale',
+        desc: 'Operating within one of India\'s largest Electronics Manufacturing Clusters, ensuring rapid scalability and immense production volume.'
       },
       {
-        title: 'Support & Maintenance',
-        desc: 'Our customer support team is always available to assist with installation, maintenance, and any other inquiries to keep your system running smoothly.'
+        title: 'Complete Supply Chain Security',
+        desc: 'In-house production of crucial solar ancillaries including specialized glass, EVA, backsheets, and aluminum frames.'
       }
     ],
     colorTheme: {
@@ -165,151 +165,127 @@ export default function BrandDetail() {
   };
 
   return (
-    <div className="w-full bg-slate-50 min-h-screen overflow-hidden">
-      {/* Brand Page Header */}
-      <section className={`bg-gradient-to-r ${colorTheme.from} ${colorTheme.to} text-white pt-[100px] md:pt-[130px] pb-16 md:pb-20 relative overflow-hidden`}>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent to-slate-950 opacity-80" />
-        <div className="container mx-auto px-4 sm:px-6 flex flex-col gap-4 text-center items-center relative z-10">
-          <motion.span 
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="bg-white/10 backdrop-blur-md text-white font-bold text-xs uppercase tracking-widest px-4 py-1.5 rounded-full border border-white/20 flex items-center gap-1.5"
-          >
-            <Award size={14} className="text-primary" /> Technical Specifications
-          </motion.span>
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1, duration: 0.6 }}
-            className="text-4xl md:text-5xl font-heading font-black text-white max-w-3xl tracking-tight leading-tight"
-          >
-            {brand.title}
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-lg md:text-xl text-slate-300 max-w-2xl font-medium leading-relaxed"
-          >
-            {brand.tagline}
-          </motion.p>
-        </div>
-      </section>
-
-      {/* Brand Content Section */}
-      <section className="section-py relative z-10">
-        <div className="container mx-auto px-4 sm:px-6 flex flex-col gap-16">
+    <div className="w-full bg-white min-h-screen font-sans">
+      
+      {/* Ultra-Minimal Hero Section */}
+      <section className="pt-[110px] md:pt-[120px] pb-10 md:pb-12 flex justify-center px-4 sm:px-6">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="container mx-auto max-w-5xl flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10"
+        >
+          {/* Subtle Logo Container */}
+          <div className="w-28 h-28 md:w-36 md:h-36 shrink-0 rounded-full border border-slate-100 bg-white shadow-sm flex items-center justify-center p-6">
+            <img 
+              src={brand.image} 
+              alt={`${brand.title} logo`} 
+              className="w-full h-full object-contain"
+            />
+          </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* Image Stack */}
+          <div className="flex flex-col gap-3 text-center md:text-left items-center md:items-start max-w-xl">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-black text-slate-900 tracking-tight leading-[1.1]">
+              {brand.title}
+            </h1>
+            
+            <p className="text-base md:text-lg text-slate-500 font-medium leading-relaxed">
+              {brand.tagline}
+            </p>
+          </div>
+        </motion.div>
+      </section>
+      {/* Combined Content Section (Twin Cards) */}
+      <section className="py-12 md:py-16 bg-slate-50 border-y border-slate-100">
+        <div className="container mx-auto px-4 sm:px-6 max-w-7xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-stretch">
+            
+            {/* Left Column: About Section */}
             <motion.div 
-              initial={{ opacity: 0, x: -30 }}
+              initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="rounded-3xl overflow-hidden shadow-2xl aspect-video md:aspect-[4/3] max-h-[380px] group"
+              className="bg-white p-8 md:p-10 rounded-[2rem] shadow-sm border border-slate-200 flex flex-col justify-center h-full relative overflow-hidden group"
             >
-              <img 
-                src={brand.image} 
-                alt={`${brand.title} installation`} 
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-              />
+              {/* Subtle Watermark */}
+              <div className="absolute -bottom-12 -right-12 w-64 h-64 opacity-5 group-hover:opacity-10 group-hover:scale-105 transition-all duration-1000 pointer-events-none">
+                <img src={brand.image} alt="Watermark" className="w-full h-full object-contain filter grayscale" />
+              </div>
+
+              <div className="relative z-10">
+                <div className="flex items-center gap-3 text-slate-400 mb-4">
+                  <Sparkles size={18} className={colorTheme.primary} />
+                  <span className="uppercase tracking-widest text-[10px] font-bold text-slate-500">
+                    Authorized Partnership
+                  </span>
+                </div>
+                
+                <h2 className="text-2xl font-bold text-slate-900 tracking-tight mb-6">
+                  About {brand.title.split(' ')[0]}
+                </h2>
+                
+                <div className="text-slate-600 leading-relaxed text-base flex flex-col gap-4 font-light">
+                  <p>{brand.whyText}</p>
+                  <p>{brand.whyText2}</p>
+                </div>
+              </div>
             </motion.div>
 
-            {/* Why Choose Brand */}
+            {/* Right Column: Key Advantages */}
             <motion.div 
-              initial={{ opacity: 0, x: 30 }}
+              initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="flex flex-col gap-5"
+              className="bg-white p-8 md:p-10 rounded-[2rem] shadow-sm border border-slate-200 flex flex-col h-full"
             >
-              <div className="flex items-center gap-2 text-primary font-bold uppercase tracking-wider text-xs">
-                <Sparkles size={16} />
-                <span>Authorized Distribution</span>
-              </div>
-              <h2 className="text-3xl font-heading font-extrabold text-slate-800 leading-tight">
-                Why Choose {brand.title.split(' ')[0]}?
+              <h2 className="text-2xl font-bold text-slate-900 tracking-tight mb-2">
+                Key Advantages
               </h2>
-              <p className="text-slate-500 text-[15px] leading-relaxed mt-2">
-                {brand.whyText}
+              <p className="text-slate-500 mb-6 text-sm">
+                The core benefits of choosing {brand.title.split(' ')[0]} solar systems.
               </p>
-              <p className="text-slate-500 text-[15px] leading-relaxed">
-                {brand.whyText2}
-              </p>
+
+              <div className="flex flex-col gap-5 flex-1 justify-center">
+                {brand.benefits.map((benefit, i) => (
+                  <div key={i} className="flex gap-4 items-start group">
+                    <div className={`mt-0.5 p-2 rounded-lg bg-slate-50 border border-slate-100 transition-colors group-hover:bg-slate-100 ${colorTheme.primary} shrink-0`}>
+                      <CheckCircle2 size={16} strokeWidth={2.5} />
+                    </div>
+                    <div className="flex flex-col gap-1">
+                      <h3 className="text-base font-bold text-slate-900 leading-tight">
+                        {benefit.title}
+                      </h3>
+                      <p className="text-sm text-slate-500 leading-relaxed font-light">
+                        {benefit.desc}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </motion.div>
           </div>
-
-          {/* Key Benefits box */}
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="bg-white rounded-3xl p-6 sm:p-8 md:p-12 shadow-premium border border-slate-100"
-          >
-            <h2 className="text-2xl md:text-3xl font-heading font-extrabold text-slate-800 text-center mb-10 leading-tight">
-              Key Benefits of Choosing {brand.title.split(' ')[0]} Solar
-            </h2>
-            
-            <motion.div 
-              variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              className="flex flex-col gap-5"
-            >
-              {brand.benefits.map((benefit, index) => (
-                <motion.div 
-                  key={index}
-                  variants={itemVariants}
-                  whileHover={{ x: 6, transition: { duration: 0.2 } }}
-                  className={`
-                    border-l-4 ${colorTheme.border} ${colorTheme.lightBg} 
-                    p-6 rounded-r-2xl shadow-sm flex items-start gap-4 group
-                  `}
-                >
-                  <div className={`w-8 h-8 rounded-full ${colorTheme.bg} text-white flex items-center justify-center shrink-0 shadow-md group-hover:rotate-12 transition-transform duration-300`}>
-                    <CheckCircle2 size={16} />
-                  </div>
-                  <div>
-                    <strong className="block text-slate-800 font-bold text-base md:text-lg mb-1 group-hover:text-slate-900 transition-colors">
-                      {benefit.title}
-                    </strong>
-                    <p className="text-slate-500 text-sm leading-relaxed">
-                      {benefit.desc}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
-            </motion.div>
-          </motion.div>
 
           {/* Action Navigation */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-16 pt-10 border-t border-slate-100"
           >
-            <motion.div whileTap={{ scale: 0.97 }}>
-              <Link 
-                to="/services" 
-                className="btn btn-outline border-slate-200 hover:border-slate-800 text-slate-600 hover:text-slate-900 px-8 py-3.5 rounded-xl flex items-center gap-2 font-bold text-sm bg-white"
-              >
-                <ArrowLeft size={16} />
-                <span>Back to Services</span>
-              </Link>
-            </motion.div>
+            <Link 
+              to="/services" 
+              className="px-8 py-3.5 rounded-full flex items-center gap-2 font-bold text-sm bg-white text-slate-600 hover:text-slate-900 hover:bg-slate-50 border border-slate-200 transition-colors"
+            >
+              <ArrowLeft size={16} />
+              <span>Back to Services</span>
+            </Link>
             
-            <motion.div whileTap={{ scale: 0.97 }}>
-              <Link 
-                to="/contact" 
-                className={`btn btn-primary ${colorTheme.bg} ${colorTheme.hover} ${colorTheme.shadow} text-white px-8 py-3.5 rounded-xl font-bold text-sm shadow-lg shine-btn block`}
-              >
-                Inquire About this Brand
-              </Link>
-            </motion.div>
+            <Link 
+              to="/contact" 
+              className={`px-8 py-3.5 rounded-full font-bold text-sm text-white ${colorTheme.bg} ${colorTheme.hover} transition-colors shadow-sm`}
+            >
+              Inquire About this Brand
+            </Link>
           </motion.div>
 
         </div>
