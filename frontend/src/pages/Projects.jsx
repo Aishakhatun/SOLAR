@@ -31,185 +31,182 @@ const projectsList = [
   {
     id: 1,
     category: 'commercial',
-    title: 'Industrial Factory Rooftop Setup',
+    title: 'Vadilal',
     image: pc1,
-    capacity: '150 kWp',
+    capacity: '50 kWp',
     location: 'Himatnagar, Gujarat'
   },
   {
     id: 2,
     category: 'commercial',
-    title: 'Corporate Office Solar Integration',
+    title: 'Sabar_Agro',
     image: pc2,
-    capacity: '80 kWp',
-    location: 'Ahmedabad, Gujarat'
+    capacity: '150 kWp',
+    location: 'Himatnagar, Gujarat'
   },
   {
     id: 3,
-    category: 'residential',
-    title: 'Off-grid Modern Villa System',
+    category: 'commercial',
+    title: 'Harsoliya_Brothers',
     image: pc3,
-    capacity: '15 kWp',
-    location: 'Idar, Gujarat'
+    capacity: '25 kWp',
+    location: 'Gandhinagar, Gujarat'
   },
   {
     id: 4,
-    category: 'commercial',
-    title: 'Warehouse Solar Canopy Layout',
+    category: 'residential',
+    title: 'Radhe-govind Society',
     image: pc4,
-    capacity: '200 kWp',
-    location: 'Mehsana, Gujarat'
+    location: 'Himatnagar, Gujarat'
   },
   {
     id: 5,
     category: 'commercial',
-    title: 'Retail Mall Green Energy Plan',
+    title: 'Hero-MotoCorp.',
     image: pc5,
-    capacity: '320 kWp',
-    location: 'Gandhinagar, Gujarat'
+    capacity: '25 kWp',
+    location: 'Himatnagar, Gujarat'
   },
   {
     id: 6,
-    category: 'residential',
-    title: 'Net-metered Suburban Home Rooftop',
+    category: 'Commercial',
+    title: 'Jumma-Masjid',
     image: pc6,
-    capacity: '10 kWp',
-    location: 'Prantij, Gujarat'
+    capacity: '20 kWp',
+    location: 'Himatnagar, Gujarat'
   },
-  {
-    id: 7,
-    category: 'commercial',
-    title: 'Cold Storage Solar Power plant',
-    image: pc7,
-    capacity: '120 kWp',
-    location: 'Talod, Gujarat'
-  },
+  // {
+  //   id: 7,
+  //   category: 'commercial',
+  //   title: 'Cold Storage Solar Power plant',
+  //   image: pc7,
+  //   capacity: '120 kWp',
+  //   location: 'Talod, Gujarat'
+  // },
   {
     id: 8,
-    category: 'residential',
-    title: 'Rooftop System with Battery Backup',
+    category: 'Commercial',
+    title: 'Masjid',
     image: pc8,
-    capacity: '8 kWp',
+    // capacity: '15 kWp',
     location: 'Himatnagar, Gujarat'
   },
   {
     id: 9,
     category: 'residential',
-    title: 'Eco-Friendly Farmhouse Panels',
+    title: 'TATA Mototrs',
     image: pc9,
-    capacity: '12 kWp',
-    location: 'Khedbrahma, Gujarat'
+    capacity: '25 kWp',
+    location: 'Gandhinagar, Gujarat'
   },
   {
     id: 10,
-    category: 'commercial',
-    title: 'Commercial Showroom Rooftop',
+    category: 'Commercial',
+    title: 'Khushboo Agro Industries',
     image: pc10,
-    capacity: '45 kWp',
+    capacity: '284 kWp',
     location: 'Modasa, Gujarat'
   },
   {
     id: 11,
-    category: 'residential',
+    category: 'Residential',
     title: 'Residential Apartment Rooftop',
     image: pc11,
     capacity: '25 kWp',
-    location: 'Vadodara, Gujarat'
+    location: 'Himatnagar, Gujarat'
   },
   {
     id: 12,
-    category: 'commercial',
-    title: 'Textile Factory Solar Grid',
+    category: 'Residential',
+    title: 'Residential Society',
     image: pc12,
-    capacity: '400 kWp',
-    location: 'Surat, Gujarat'
+    capacity: '50 kWp',
+    location: 'Himatnagar, Gujarat'
   },
   {
     id: 13,
     category: 'commercial',
-    title: 'Agricultural Solar Water Pump',
+    title: 'Agro Industries',
     image: pc13,
-    capacity: '30 kWp',
-    location: 'Rajkot, Gujarat'
+    capacity: '284 kWp',
+    location: 'Himatnagar, Gujarat'
   },
   {
     id: 14,
     category: 'residential',
     title: 'Modern Duplex Rooftop Solar',
     image: pc14,
-    capacity: '6 kWp',
+    // capacity: '6 kWp',
     location: 'Himatnagar, Gujarat'
   },
   {
     id: 15,
     category: 'commercial',
-    title: 'Solar Carport Canopy',
+    title: 'Vadilal Cold Storage',
     image: pc15,
     capacity: '50 kWp',
-    location: 'Ahmedabad, Gujarat'
+    location: 'Himatnagar, Gujarat'
   },
   {
     id: 16,
     category: 'residential',
-    title: 'Eco Villa Rooftop Array',
+    title: 'Yashvi Agro Industries',
     image: pc16,
-    capacity: '18 kWp',
-    location: 'Idar, Gujarat'
+    capacity: '40 kWp',
+    location: 'Himatnagar, Gujarat'
   },
   {
     id: 17,
     category: 'commercial',
-    title: 'School Building Solar Project',
+    title: 'Sun Roto printpack',
     image: pc17,
-    capacity: '75 kWp',
-    location: 'Mehsana, Gujarat'
+    capacity: '100 kWp',
+    location: 'Himatnagar, Gujarat'
   },
   {
     id: 18,
     category: 'residential',
-    title: 'Off-grid Rural Home Power',
+    title: 'ZamZam Traders',
     image: pc18,
-    capacity: '5 kWp',
-    location: 'Khedbrahma, Gujarat'
+    capacity: '30 kWp',
+    location: 'Himatnagar, Gujarat'
   },
   {
     id: 19,
     category: 'commercial',
-    title: 'Dairy Plant Rooftop Setup',
+    title: 'Indian-Oil petrolPump',
     image: pc19,
-    capacity: '180 kWp',
     location: 'Himatnagar, Gujarat'
   },
   {
     id: 20,
     category: 'residential',
-    title: 'Luxury Penthouse Solar System',
+    title: 'Sun Roto',
     image: pc20,
-    capacity: '14 kWp',
+    capacity: '100 kWp',
     location: 'Gandhinagar, Gujarat'
   },
   {
     id: 21,
-    category: 'commercial',
-    title: 'Hospital Emergency Power Backup',
+    category: 'Residential',
+    title: 'Residential Apartment',
     image: pc21,
     capacity: '100 kWp',
     location: 'Modasa, Gujarat'
   },
-  {
-    id: 22,
-    category: 'residential',
-    title: 'Stand-alone Society Solar Grid',
-    image: pc22,
-    capacity: '50 kWp',
-    location: 'Prantij, Gujarat'
-  },
+  // {
+  //   id: 22,
+  //   category: 'residential',
+  //   title: 'Stand-alone Society Solar Grid',
+  //   image: pc22,
+  //   capacity: '50 kWp',
+  //   location: 'Prantij, Gujarat'
+  // },
   {
     id: 23,
     category: 'commercial',
-    title: 'Agro-Processing Solar Plant',
+    title: 'RAJ-Motors',
     image: pc23,
-    capacity: '90 kWp',
     location: 'Talod, Gujarat'
   }
 ];
@@ -339,14 +336,13 @@ export default function Projects() {
                       <Eye size={18} />
                     </div>
                     <div className="flex flex-col gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                      <div className="flex items-center gap-1.5 text-primary text-xs font-bold uppercase">
-                        <Zap size={14} />
-                        <span>{project.capacity} System</span>
-                      </div>
-                      <div className="flex items-center gap-1.5 text-slate-300 text-xs font-semibold">
-                        <MapPin size={14} className="text-secondary" />
-                        <span>{project.location}</span>
-                      </div>
+                      {project.capacity && (
+                        <div className="flex items-center gap-1.5 text-primary text-xs font-bold uppercase">
+                          <Zap size={14} />
+                          <span>{project.capacity}</span>
+                        </div>
+                      )}
+
                     </div>
                   </div>
                 </div>
@@ -355,7 +351,9 @@ export default function Projects() {
                   <h3 className="text-lg font-heading font-bold text-slate-800 mb-1 group-hover:text-primary transition-colors duration-300">
                     {project.title}
                   </h3>
-                  <p className="text-slate-400 text-xs font-semibold uppercase tracking-wider mt-1">{project.capacity} Capacity</p>
+                  {project.capacity && (
+                    <p className="text-slate-400 text-xs font-semibold uppercase tracking-wider mt-1">{project.capacity} Capacity</p>
+                  )}
                 </div>
               </motion.div>
             ))}
@@ -371,7 +369,7 @@ export default function Projects() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-slate-950/98 backdrop-blur-md p-4 sm:p-6 gap-3 sm:gap-5"
+            className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-slate-950/95 backdrop-blur-md p-4 sm:p-6 gap-3 sm:gap-5"
             onClick={handleClose}
           >
             {/* Top Bar (Responsive positioning and spacing) */}
@@ -445,7 +443,7 @@ export default function Projects() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 10 }}
               transition={{ duration: 0.25 }}
-              className="max-w-xl w-full bg-slate-900/70 backdrop-blur-md border border-white/10 p-4 sm:p-6 rounded-xl sm:rounded-2xl text-center text-white flex flex-col items-center gap-2 sm:gap-3 shadow-2xl"
+              className="max-w-xl w-full bg-transparent p-4 sm:p-6 rounded-xl sm:rounded-2xl text-center text-white flex flex-col items-center gap-2 sm:gap-3"
               onClick={(e) => e.stopPropagation()}
             >
               <span className="px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-primary/10 text-primary font-bold text-[9px] sm:text-[10px] uppercase tracking-wider border border-primary/20">
@@ -455,14 +453,13 @@ export default function Projects() {
                 {filteredProjects[selectedProjectIndex].title}
               </h2>
               <div className="flex items-center gap-4 sm:gap-6 mt-0.5 sm:mt-1 text-slate-450 text-[11px] sm:text-sm">
-                <div className="flex items-center gap-1 sm:gap-1.5">
-                  <Zap size={14} className="text-primary sm:w-4 sm:h-4" />
-                  <span className="font-bold">{filteredProjects[selectedProjectIndex].capacity} Capacity</span>
-                </div>
-                <div className="flex items-center gap-1 sm:gap-1.5">
-                  <MapPin size={14} className="text-secondary sm:w-4 sm:h-4" />
-                  <span className="font-semibold">{filteredProjects[selectedProjectIndex].location}</span>
-                </div>
+                {filteredProjects[selectedProjectIndex].capacity && (
+                  <div className="flex items-center gap-1 sm:gap-1.5">
+                    <Zap size={14} className="text-primary sm:w-4 sm:h-4" />
+                    <span className="font-bold">{filteredProjects[selectedProjectIndex].capacity} Capacity</span>
+                  </div>
+                )}
+
               </div>
             </motion.div>
           </motion.div>

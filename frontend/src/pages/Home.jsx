@@ -47,9 +47,9 @@ export default function Home() {
   };
 
   // Calculator logic
-  const unitsConsumed = Math.round(monthlyBill / 7.5);
+  const unitsConsumed = Math.round(monthlyBill / 8);
   const recommendedKW = (unitsConsumed / 120).toFixed(1);
-  const estimatedCost = Math.round(recommendedKW * 65000);
+  const estimatedCost = Math.round(recommendedKW * 50000);
   const annualSavings = Math.round(monthlyBill * 12 * 0.9);
   const lifetimeSavings = annualSavings * 25;
   const treesPlanted = Math.round(recommendedKW * 18);
@@ -368,7 +368,7 @@ export default function Home() {
                 </div>
                 <div className="flex justify-between text-xs">
                   <span className="text-slate-500 font-bold">Average tariff rate:</span>
-                  <span className="text-slate-800 font-bold">₹7.50 per unit</span>
+                  <span className="text-slate-800 font-bold">₹8.00 per unit</span>
                 </div>
               </div>
             </div>

@@ -4,9 +4,9 @@ import { Sun, Sparkles, Lightbulb, CheckCircle2, UserCheck, HelpCircle, ArrowRig
 import { motion } from 'framer-motion';
 
 // Local image imports
-import imgPanel from '../assets/photo/service/panel.jpg';
-import imgCleaning from '../assets/photo/service/cleaning.jpg';
-import imgLight from '../assets/photo/service/light.jpeg';
+import imgPanel from '../assets/photo/service/panel_pro.png';
+import imgCleaning from '../assets/photo/service/cleaning_pro.png';
+import imgLight from '../assets/photo/service/light_pro.png';
 import imgFeature from '../assets/photo/service/feature.png';
 import imgWaaree from '../assets/photo/service/Waaree_Logo.jpg';
 import imgGoldi from '../assets/photo/service/goldi.jpg';
